@@ -1,18 +1,30 @@
 import pandas as pd
 import numpy as np
 
-labels = ['a', 'b', 'c']
+# Criacao de dados
+serie1 = pd.Series([1, 2, 3, 4], index=['EUA', 'Alemanha', 'Russia', 'Japao'])
 
-minha_lista = [10, 20, 30]
+# Plotagem dados
+# print(serie1)
 
-arr = np.array([10, 20, 30])
+# Criacao de dados
+serie2 = pd.Series([2, 3, 4, 5], index=['EUA', 'Alemanha', 'Russia', 'Japao'])
 
-d = {'a': 10, 'b': 20, 'c': 30}
+# Plotagem dados
+# print(serie2)
+
+# Acessando valores a partir do index
+change_index = serie1['Japao']
+# print(change_index)
+
+# Acessando 2 valores a partir do index
+change_index = serie1[['Japao', 'EUA']]
+# print(change_index)
 
 
-result = pd.Series(labels)
+# Operacoes aritmeticas com series
+soma = serie1 + serie2
+# print(soma)
 
-print(result)
-
-function = pd.Series(data=labels, index=minha_lista)
-print(function)
+subtracao = serie2 - serie1
+print(subtracao)
