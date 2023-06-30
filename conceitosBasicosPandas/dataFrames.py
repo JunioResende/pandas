@@ -25,4 +25,7 @@ print(f'originalDataFrame:\n,{data_frame}')
 
 # Acessando valores das linhas
 linhas_AB = data_frame.loc[['A', 'B']]
-print(f'selectedLines:\n{linhas_AB}')
+# print(f'selectedLines:\n{linhas_AB}')
+
+dado_colunaX_LinhaA = data_frame.iloc[0, 1]
+print(dado_colunaX_LinhaA)
